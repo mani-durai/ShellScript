@@ -12,7 +12,6 @@ sleep 15
 while true
 do
   STATUS1=$(curl -s -o /dev/null -w "%{http_code}"http://Ip1:8088/service1/)
-
   STATUS2=$(curl -s -o /dev/null -w "%{http_code}" http://Ip2:8087/service2/)
     if [ $STATUS1 -eq 200 ] && [ $STATUS2 -eq 200 ] ; then
 
