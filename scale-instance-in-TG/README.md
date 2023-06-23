@@ -12,7 +12,7 @@ Solution:
 we have developed a shell script that automates the process of starting instances and attaching the appropriate target groups and maintaining the same ip address for the instance, saving time and effort.This solution allows us to dynamically scale up instances when high utilization is detected, ensuring optimal performance for our applications. 
 
 
-
+![alt text](https://github.com/mani-durai/ShellScript/blob/main/scale-instance-in-TG/sacle-multip-tg.jpg)
 
 Shell Script Automation: To simplify the scaling/scale-out and target group attachment/deregister process, we have developed a shell script that handles the entire workflow. This script can be executed manually or scheduled or invoke Cloudwatch alarms to run, depending on the anticipated workload changes.
 we will demonstrate how to execute a shell script remotely from an EC2 instance using Amazon EventBridge rules and the SSM Run Command document. Instead of utilizing auto scaling, we will start an EC2 instance and register its two target groups with a load balancer when a CloudWatch alarm is triggered due to high CPU utilization exceeding 80%. The following steps outline the configuration and functionality of this solution.
